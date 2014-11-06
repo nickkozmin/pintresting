@@ -25,6 +25,8 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass'
 gem 'paperclip', '~> 4.2.0'
+gem 'aws-sdk' , '~> 1.57.0'
+
 
 group :development, :test do 
 	gem 'sqlite3'
@@ -33,6 +35,7 @@ end
 group :production do 
 	gem 'pg'
 	gem 'rails_12factor'
+	gem 'aws-sdk' , '~> 1.57.0'
 end
 	
 
