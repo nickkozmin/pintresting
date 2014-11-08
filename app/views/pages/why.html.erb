@@ -1,4 +1,14 @@
 <div class = "jumbotron">
 	<h1>Why do this shit?</h1>
 	<p>Because I like it <%= link_to "Sign Up!" , "#" , class: "btn btn-primary btn-lg" %></p>
+	<%= current_user.email %>
 </div>
+
+<%= current_user.email %> </br>
+<%= current_user.name %>
+<%= current_user.subject %>
+<%=render 'pages/home' if !user_signed_in? %>
+
+<%= @user %>
+
+

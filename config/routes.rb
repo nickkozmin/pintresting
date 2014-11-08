@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  resources :avatars
+
+  devise_for :schools
+  devise_for :tutors
   resources :pins
 
   devise_for :users
+  resources :users, :only => [:show]
   root "pins#index"
   get "about" => "pages#about"
   get "why" => "pages#why"
+  get 'users/:id' => 'users#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
